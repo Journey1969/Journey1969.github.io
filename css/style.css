@@ -196,10 +196,8 @@ a {
   margin: 0.5rem 0;
   padding-left: 1rem;
 }
-.post .code-block-wrapper {
+.post .highlight {
   margin: 2rem 1rem;
-}
-.post .code-block-wrapper .highlight {
   border-radius: 5px;
   position: relative;
   overflow: auto;
@@ -207,7 +205,7 @@ a {
   box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
   background-color: #292929;
 }
-.post .code-block-wrapper .highlight:before {
+.post .highlight:before {
   content: attr(data-code-type);
   position: absolute;
   top: 0;
@@ -217,55 +215,55 @@ a {
   text-indent: 1rem;
   line-height: 2rem;
 }
-.post .code-block-wrapper .highlight table {
+.post .highlight table {
   width: 100%;
   border-spacing: 0;
   border-top: 2rem solid #393939;
 }
-.post .code-block-wrapper .highlight tbody {
+.post .highlight tbody {
   display: block;
   padding: 1rem;
 }
-.post .code-block-wrapper .highlight span,
-.post .code-block-wrapper .highlight .line {
+.post .highlight span,
+.post .highlight .line {
   color: #fff;
   font-size: 0.9rem;
   font-family: "Consolas";
 }
-.post .code-block-wrapper .highlight span::selection,
-.post .code-block-wrapper .highlight .line::selection {
+.post .highlight span::selection,
+.post .highlight .line::selection {
   color: #fff;
   background: #00bfff;
 }
-.post .code-block-wrapper .highlight .line {
+.post .highlight .line {
   height: 1.5rem;
   line-height: 1.5rem;
 }
-.post .code-block-wrapper .html .name {
+.post .html .name {
   color: #e06c75;
 }
-.post .code-block-wrapper .html .attr {
+.post .html .attr {
   color: #e8bb5e;
 }
-.post .code-block-wrapper .html .string {
+.post .html .string {
   color: #98c379;
 }
-.post .code-block-wrapper .html .comment {
+.post .html .comment {
   color: #888;
 }
-.post .code-block-wrapper .javascript .keyword {
+.post .javascript .keyword {
   color: #da80ea;
 }
-.post .code-block-wrapper .javascript .string {
+.post .javascript .string {
   color: #98c379;
 }
-.post .code-block-wrapper .javascript .number {
+.post .javascript .number {
   color: #e8bb5e;
 }
-.post .code-block-wrapper .javascript .comment {
+.post .javascript .comment {
   color: #888;
 }
-.post .code-block-wrapper .bash .string {
+.post .bash .string {
   color: #98c379;
 }
 #footer {

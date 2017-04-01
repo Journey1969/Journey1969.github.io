@@ -185,8 +185,29 @@ a {
 .post hr {
   margin: 1rem 0;
 }
-.post img {
-  width: 100%;
+.post br {
+  line-height: 0;
+}
+.post .img-wrapper {
+  margin: 1rem 0;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.post .img-wrapper img {
+  display: block;
+  max-width: 640px;
+  max-height: 400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 10px solid #eee;
+}
+.post .img-wrapper .img-caption {
+  padding-top: 5px;
+  color: #aaa;
+  font-size: 14px;
 }
 .post p {
   line-height: 2rem;

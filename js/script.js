@@ -9,6 +9,4 @@
     }
 
     initCodeBlock();
-
-    alert("js here");
 })();

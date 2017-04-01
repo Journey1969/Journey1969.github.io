@@ -1,8 +1,3 @@
-#container {
-  min-height: 800px;
-  display: flex;
-  flex-direction: column;
-}
 html,
 body,
 h1,
@@ -12,6 +7,7 @@ h4,
 h5,
 h6,
 ul,
+ol,
 li,
 p,
 td,
@@ -33,7 +29,7 @@ a {
   src: url("http://oa97mm615.bkt.clouddn.com/Consolas.ttf");
 }
 #header {
-  background: -webkit-linear-gradient(45deg, #eb23b4, #368bd8);
+  background: -webkit-linear-gradient(210deg, #4169e1, #00ced1);
 }
 #header-container {
   max-width: 900px;
@@ -67,21 +63,17 @@ a {
 #header-nav .header-nav-link:hover {
   color: #fff;
 }
-#main {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
 #main-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
 }
 #main-container:before {
-  content: "<!--------------------------- THIS IS A HIDDEN PARAGRAPH FOR PROPING UP THE NORMAL BOX SIZE. --------------------------->";
+  content: "";
+  display: block;
   height: 0;
+  width: 800px;
   visibility: hidden;
 }
 #main-container .read-more-link {
@@ -151,9 +143,10 @@ a {
   line-height: 1.5rem;
 }
 .post {
-  padding: 1rem;
+  width: 100%;
   margin: 0 auto;
-  width: 90%;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 .post h1 {
   font-size: 2rem;
@@ -186,7 +179,7 @@ a {
   width: 100%;
 }
 .post p {
-  line-height: 1.6rem;
+  line-height: 2rem;
 }
 .post code {
   padding: 1px 2px;
@@ -197,34 +190,37 @@ a {
   background-color: #f8f8f8;
   font-family: "Consolas";
 }
+.post ul,
+.post ol {
+  list-style-position: inside;
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+}
 .post .code-block-wrapper {
-  margin: 1rem;
+  margin: 2rem 1rem;
 }
 .post .code-block-wrapper .highlight {
-  font-size: 16px;
-  padding-top: 2rem;
-  border-collapse: collapse;
-  border: none;
-  position: relative;
-  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
   border-radius: 5px;
-  background-color: rgba(40,44,52,0.95);
-  overflow-x: auto;
+  position: relative;
+  overflow: auto;
+  font-size: 16px;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
+  background-color: #292929;
 }
 .post .code-block-wrapper .highlight:before {
   content: attr(data-code-type);
-  height: 2rem;
   position: absolute;
   top: 0;
   left: 0;
   color: #fff;
   font-family: "Consolas";
-  line-height: 2rem;
   text-indent: 1rem;
+  line-height: 2rem;
 }
 .post .code-block-wrapper .highlight table {
-  display: block;
+  width: 100%;
   border-spacing: 0;
+  border-top: 2rem solid #393939;
 }
 .post .code-block-wrapper .highlight tbody {
   display: block;
@@ -236,8 +232,14 @@ a {
   font-size: 0.9rem;
   font-family: "Consolas";
 }
+.post .code-block-wrapper .highlight span::selection,
+.post .code-block-wrapper .highlight .line::selection {
+  color: #fff;
+  background: #00bfff;
+}
 .post .code-block-wrapper .highlight .line {
   height: 1.5rem;
+  line-height: 1.5rem;
 }
 .post .code-block-wrapper .html .name {
   color: #e06c75;
@@ -270,7 +272,7 @@ a {
   background: linear-gradient(#444, #333);
 }
 #footer-container {
-  min-height: 60px;
+  min-height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,7 +286,7 @@ a {
   color: #aaa;
 }
 #footer-list .footer-list-item {
-  padding-right: 1rem;
+  margin-right: 1rem;
 }
 #footer-list .footer-list-item .footer-list-item-link {
   color: #aaa;

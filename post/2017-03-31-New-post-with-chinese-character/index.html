@@ -36,6 +36,25 @@
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addCodeType</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> highlight = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'highlight'</span>);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; highlight.length; i++) &#123;</div><div class="line">        <span class="keyword">let</span> code_type = highlight[i].className.split(<span class="string">' '</span>)[<span class="number">1</span>];</div><div class="line">        highlight[i].setAttribute(<span class="string">'data-code-type'</span>, code_type.toUpperCase());</div><div class="line">        <span class="built_in">console</span>.log(code_type);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// colorfulHeader();</span></div><div class="line">addCodeType();</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">barely text</div></pre></td></tr></table></figure>
 <p><code>Code?</code><br><code>A long long Code</code></p>
+<ul>
+<li>list1</li>
+<li>list2</li>
+<li>list3<ul>
+<li>afasf</li>
+<li>asfasf</li>
+<li>asfa</li>
+<li>asf</li>
+</ul>
+</li>
+<li>asfasf</li>
+<li>asfasf</li>
+<li>asf</li>
+</ul>
+<ol>
+<li>asfasf</li>
+<li>asfasf</li>
+<li>asdfasf</li>
+</ol>
 </div>
   
 

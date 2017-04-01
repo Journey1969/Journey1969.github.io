@@ -21,6 +21,16 @@ figure {
 html {
   font-family: 'Droid Sans';
 }
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track-piece {
+  background: rgba(185,185,185,0.5);
+}
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
 a {
   text-decoration: none;
 }
@@ -29,7 +39,7 @@ a {
   src: url("http://oa97mm615.bkt.clouddn.com/Consolas.ttf");
 }
 #header {
-  background: -webkit-linear-gradient(210deg, #4169e1, #00ced1);
+  background: -webkit-linear-gradient(240deg, #00ced1, #4169e1);
 }
 #header-container {
   max-width: 900px;
@@ -214,6 +224,17 @@ a {
   font-family: "Consolas";
   text-indent: 1rem;
   line-height: 2rem;
+}
+.post .highlight::-webkit-scrollbar-track {
+  background-color: #444;
+  border-radius: 5px;
+}
+.post .highlight::-webkit-scrollbar {
+  width: 10px;
+}
+.post .highlight::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.4);
 }
 .post .highlight table {
   width: 100%;

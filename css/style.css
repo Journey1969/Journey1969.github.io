@@ -192,6 +192,9 @@ a {
 .post .img-loading {
   height: 420px;
   background-color: #eee;
+  background-image: url("../image/loading.gif");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .post .img-loading img,
 .post .img-loading .img-caption {

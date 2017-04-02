@@ -11,22 +11,23 @@
             var img = $(this);
             img.attr('class', 'lazy');
             img.attr('data-original', img.attr('src'));
-            img.wrap('<div class="img-wrapper"></div>');
-            img.after('<span class="img-caption">' + this.title + '</span>');
+            img.wrap('<div class="img-wrapper img-loading"></div>');
         });
     })
 
-    // cancel min-height of img wrapper after images all loaded
-    $('#main-container').imagesLoaded().done(function() {
-        $('.post-content').each(function() {
-            $(this).find('.img-wrapper').each(function() {
-                $(this).css('min-height', '0')
-            })
-        })
+    // cancel height of img wrapper after each image is loaded
+    $('#main-container').imagesLoaded().progress(function(instance, image) {
+        var wrapper = $(image.img).parent();
+        if (image.isLoaded) {
+            $(image.img).after('<p class="img-caption">' + image.img.alt + '</p>');
+        } else {
+            wrapper.addClass('img-broken');
+        }
+        wrapper.removeClass('img-loading');
     })
 
     // lazyload
     $(function() {
-        $("img.lazy").lazyload({effect: "fadeIn"});
+        $("img.lazy").lazyload();
     });
 })(jQuery);

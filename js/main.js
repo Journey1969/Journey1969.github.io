@@ -15,13 +15,13 @@
             var path = origin_img_src.split('/');
             path.push("min__" + path.pop());
             min_img_src = path.join("/");
-            console.log(min_img_src);
 
             // img.attr('class', 'lazy');
             // img.attr('data-original', min_img_src);
             img.attr('src', min_img_src);
             img.wrap('<div class="img-wrapper img-loading"></div>');
             img.after('<p class="img-caption">' + this.alt + '</p>');
+            // img.after('<link class="prefetch-link" rel="prefetch" href="' + origin_img_src + '">');
             img.wrap('<a href="' + origin_img_src + '" title="' + this.alt + '" class="fancybox" rel="article"></a>');
         });
     })
@@ -45,4 +45,19 @@
 
     // activate fancybox
     $('a.fancybox').fancybox();
+
+    // origin images preload
+    window.onload = function () {
+        $('.post-content').each(function(i) {
+            $(this).find('.fancybox').each(function() {
+                var thisbox = $(this);
+                thisbox.css("background-image", 'url(' + $(this).attr('href') + ')');
+                thisbox.css("background-repeat", 'no-repeat');
+                thisbox.css("background-position", '-9999px -9999px');
+                setTimeout(function () {
+                    thisbox.removeAttr('style');
+                }, 1000 * 10);
+            });
+        })
+    }
 })(jQuery);

@@ -204,6 +204,8 @@ a {
 }
 .post .img-wrapper .fancybox .img-loaded {
   border: 10px solid #eee;
+  background-repeat: no-repeat;
+  background-position: -9999px -9999px;
 }
 .post .img-wrapper .img-caption {
   text-align: center;

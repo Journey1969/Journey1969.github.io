@@ -63,7 +63,7 @@ a {
 }
 #main-container {
   max-width: 800px;
-  min-height: 900px;
+  min-height: calc(100vh - 120px);
   margin: 0 auto;
   padding: 1rem;
   box-sizing: border-box;
@@ -432,7 +432,7 @@ a {
   padding: 1rem;
 }
 #about-container .about-item {
-  max-width: 500px;
+  max-width: 360px;
   line-height: 1.5rem;
   margin: 1rem auto;
 }
